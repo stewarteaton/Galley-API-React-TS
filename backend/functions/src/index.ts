@@ -31,7 +31,6 @@ const axiosUnsplash = axios.create({
 });
 
 
-
 interface Props{
     query: String;
     page: String;
@@ -42,10 +41,7 @@ interface UrlList {
     src: String;
 }[]
 
-app.get('/', (req, res) => 
 
-    res.status(200).send('Hey there!') 
-)
 
 app.get('/:query/:page', async(req, res) => {
     console.log(req.params.query)
@@ -83,7 +79,7 @@ app.get('/:query/:page', async(req, res) => {
                 })
             } else {
                 console.log('Error with returned api data')
-                res.json({error: 'Unexpected response from third party API'})
+                res.status(400).json({error: 'Unexpected response from third party API'})
             }
         })
         console.log(urlList)
