@@ -2,6 +2,8 @@
 <hr>
 <ul><li>https://photo-gallery-app192837.web.app/</ul></li>
 
+<img src='./images/desktop.png' alt='app image'/>
+
 <br/>
 <h3>Backend</h3>
 <hr>
